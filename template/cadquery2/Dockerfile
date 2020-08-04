@@ -35,11 +35,11 @@ COPY function/requirements.txt	.
 
 RUN pip install -r requirements.txt --target=/home/app/python
 
-RUN conda install -c cadquery -c conda-forge cadquery=master
-
 WORKDIR /home/app/
 
 USER root
+
+RUN conda install -c cadquery -c conda-forge cadquery=master
 
 COPY function           function
 
