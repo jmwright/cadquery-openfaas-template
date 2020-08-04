@@ -7,7 +7,7 @@ ARG ADDITIONAL_PACKAGE
 
 COPY --from=watchdog /fwatchdog /usr/bin/fwatchdog
 RUN chmod +x /usr/bin/fwatchdog
-RUN apk --no-cache add ca-certificates ${ADDITIONAL_PACKAGE}
+#RUN apk --no-cache add ca-certificates ${ADDITIONAL_PACKAGE}
 
 
 # Add non root user
