@@ -11,7 +11,8 @@ RUN chmod +x /usr/bin/fwatchdog
 
 
 # Add non root user
-RUN addgroup -S app && adduser app -S -G app
+RUN useradd -ms /bin/bash app 
+#RUN addgroup -S app && adduser app -S -G app
 
 WORKDIR /home/app/
 
