@@ -39,6 +39,8 @@ WORKDIR /home/app/
 
 USER root
 
+RUN apt-get install -y libgl1-mesa-glx
+
 RUN conda install -c cadquery -c conda-forge cadquery=master
 
 COPY function           function
